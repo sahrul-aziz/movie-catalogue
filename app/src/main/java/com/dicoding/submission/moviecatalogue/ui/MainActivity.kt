@@ -1,7 +1,8 @@
-package com.dicoding.submission.moviecatalogue
+package com.dicoding.submission.moviecatalogue.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dicoding.submission.moviecatalogue.R
 
 class MainActivity : AppCompatActivity() {
 
