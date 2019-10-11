@@ -1,6 +1,10 @@
-package com.dicoding.submission.myapplication
+package com.dicoding.submission.moviecatalogue.model
+
+import com.dicoding.submission.moviecatalogue.R
 
 object MovieData {
+
+    private val totalData: Int = 20
 
     private val moviesTitle = arrayOf(
         "A Star is Born",
@@ -25,7 +29,28 @@ object MovieData {
         "Venom"
     )
 
-    private val moviesPoster = intArrayOf()
+    private val moviesPoster = intArrayOf(
+        R.drawable.poster_a_star,
+        R.drawable.poster_aquaman,
+        R.drawable.poster_avengerinfinity,
+        R.drawable.poster_birdbox,
+        R.drawable.poster_bohemian,
+        R.drawable.poster_bumblebee,
+        R.drawable.poster_creed,
+        R.drawable.poster_deadpool,
+        R.drawable.poster_dragon,
+        R.drawable.poster_dragonball,
+        R.drawable.poster_glass,
+        R.drawable.poster_hunterkiller,
+        R.drawable.poster_marrypopins,
+        R.drawable.poster_mortalengine,
+        R.drawable.poster_preman,
+        R.drawable.poster_robinhood,
+        R.drawable.poster_spiderman,
+        R.drawable.poster_thegirl,
+        R.drawable.poster_themule,
+        R.drawable.poster_venom
+    )
 
     private val moviesYear = intArrayOf(
         2018,
@@ -51,7 +76,7 @@ object MovieData {
     )
 
     private val moviesScore = intArrayOf(
-        75
+        75, 68, 83, 70, 80, 65, 67
     )
 
     private val moviesOverview = arrayOf(
@@ -78,15 +103,40 @@ object MovieData {
     )
 
     private val moviesRuntime = arrayOf(
-        "2h 15m"
+        "2h 15m",
+        "2h 24m",
+        "2h 29m",
+        "2h 4m",
+        "2h 15m",
+        "1h 54m",
+        "2h 10m"
     )
 
     private val moviesListOfGenre = arrayOf(
-        listOf("Drama", "Romance", "Music")
+        listOf("Drama", "Romance", "Music"),
+        listOf("Action", "Adventure", "Fantasy"),
+        listOf("Adventure", "Action", "Science Fiction"),
+        listOf("Thriller", "Drama"),
+        listOf("Drama", "Music"),
+        listOf("Action", "Adventure", "Science Fiction"),
+        listOf("Drama")
     )
 
-    private val moviesListOfCast = arrayOf(
-        Cast()
-    )
-
+    val movieData: ArrayList<Movie>
+        get() {
+            val list = arrayListOf<Movie>()
+            for (position in 0 until totalData) {
+                val movie = Movie()
+                movie.title = moviesTitle[position]
+                movie.poster = moviesPoster[position]
+                movie.year = moviesYear[position]
+                movie.score = moviesScore[position]
+                movie.overview = moviesOverview[position]
+                movie.runtime = moviesRuntime[position]
+                movie.listOfGenre = moviesListOfGenre[position]
+                movie.listOfCast = CastData.getListOfCast(position)
+                list.add(movie)
+            }
+            return list
+        }
 }

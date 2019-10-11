@@ -1,16 +1,16 @@
-package com.dicoding.submission.myapplication
+package com.dicoding.submission.moviecatalogue.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Movie(
-    val title: String = "",
-    val poster: Int = 0,
-    val year: Int = 0,
-    val score: Int = 0,
-    val overview: String = "",
-    val runtime: String = "",
-    val listOfGenre: List<String> = listOf(),
-    val listOfCast: List<Cast> = listOf()
+    var title: String = "",
+    var poster: Int = 0,
+    var year: Int = 0,
+    var score: Int = 0,
+    var overview: String = "",
+    var runtime: String = "",
+    var listOfGenre: List<String> = listOf(),
+    var listOfCast: List<Cast> = listOf()
 ) : Parcelable
