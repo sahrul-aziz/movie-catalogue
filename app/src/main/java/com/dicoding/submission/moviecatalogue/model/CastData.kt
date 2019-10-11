@@ -58,6 +58,49 @@ object CastData {
         Cast(name = "Tessa Thompson", character = "Bianca Taylor")
     )
 
+    private val listCastDeadpool = arrayListOf(
+        Cast(name = "Ryan Reynolds", character = "Wade Wilson / Deadpool / Juggernaut (voice) / Himself"),
+        Cast(name = "Fred Savage", character = "Himself"),
+        Cast(name = "Josh Brolin", character = "Cable"),
+        Cast(name = "Morena Baccarin", character = "Vanessa"),
+        Cast(name = "Julian Dennison", character = "Russell Collins / Firefist")
+    )
+
+    private val listCastDragon = arrayListOf(
+        Cast(name = "Jay Baruchel", character = "Hiccup (voice)"),
+        Cast(name = "America Ferrera", character = "Astrid (voice)"),
+        Cast(name = "Cate Blanchett", character = "Valka (voice)"),
+        Cast(name = "Craig Ferguson", character = "Gobber the Belch (voice)"),
+        Cast(name = "Jonah Hill", character = "Snotlout Jorgenson (voice)")
+    )
+
+    private val listCastDragonBall = arrayListOf(
+        Cast(name = "Masako Nozawa", character = "Son Goku / Son Goten / Gogeta / Bardock (voice)"),
+        Cast(name = "Ryou Horikawa", character = "Vegeta / Gogeta (voice)"),
+        Cast(name = "Bin Shimada", character = "Broly (voice)"),
+        Cast(name = "Ryusei Nakao", character = "Freeza (voice)"),
+        Cast(name = "Banjou Ginga", character = "King Vegeta III (voice)")
+    )
+
+    private val listCastGlass = arrayListOf(
+        Cast(name = "James McAvoy", character = "Patricia / Dennis / Hedwig / The Beast / Barry / Heinrich / Jade / Ian / Mary Reynolds / Norma / Jalin / Kat / B.T. / Kevin Wendell Crumb / Mr. Pritchard / Felida / Luke / Goddard / Samuel / Polly"),
+        Cast(name = "Bruce Willis", character = "David Dunn / The Overseer"),
+        Cast(name = "Anya Taylor-Joy", character = "Casey Cooke"),
+        Cast(name = "Sarah Paulson", character = "Dr. Ellie Staple"),
+        Cast(name = "Samuel L. Jackson", character = "Elijah Price / Mr. Glass")
+    )
+
+    private val listCastHunterKiller = arrayListOf(
+        Cast(name = "Gerard Butler", character = "Captain Joe Glass"),
+        Cast(name = "Gary Oldman", character = "CJCS Charles Donnegan"),
+        Cast(name = "Toby Stephens", character = "Bill Beaman"),
+        Cast(name = "Common", character = "RA John Fisk"),
+        Cast(name = "Linda Cardellini", character = "Jane Norquist")
+    )
+
+
+
+
 
     private val listOfAllCast = arrayOf(
         listCastAStarIsBorn,
@@ -66,7 +109,12 @@ object CastData {
         listCastBirdBox,
         listCastBohemianRhapsody,
         listCastBumblebee,
-        listCastCreed
+        listCastCreed,
+        listCastDeadpool,
+        listCastDragon,
+        listCastDragonBall,
+        listCastGlass,
+        listCastHunterKiller
     )
 
     fun getListOfCast(position: Int) : ArrayList<Cast>{
