@@ -98,9 +98,69 @@ object CastData {
         Cast(name = "Linda Cardellini", character = "Jane Norquist")
     )
 
+    private val listCastMaryPoppins = arrayListOf(
+        Cast(name = "Emily Blunt", character = "Mary Poppins"),
+        Cast(name = "Lin-Manuel Miranda", character = "Jack"),
+        Cast(name = "Ben Whishaw", character = "Michael Banks"),
+        Cast(name = "Emily Mortimer", character = "Jane Banks"),
+        Cast(name = "Pixie Davies", character = "Annabel Banks")
+    )
 
+    private val listCastMortalEngines = arrayListOf(
+        Cast(name = "Hera Hilmar", character = "Hester Shaw"),
+        Cast(name = "Robert Sheehan", character = "Tom Natsworthy"),
+        Cast(name = "Hugo Weaving", character = "Thaddeus Valentine"),
+        Cast(name = "Jihae", character = "Anna Fang"),
+        Cast(name = "Ronan Raftery", character = "Bevis Pod")
+    )
 
+    private val listCastPremanPensiun = arrayListOf(
+        Cast(name = "Epy Kusnandar", character = "Kang Mus"),
+        Cast(name = "Tya Arifin", character = "Kinanti"),
+        Cast(name = "Soraya Rasyid", character = "Imas"),
+        Cast(name = "Andra Manihot", character = "Dikdik"),
+        Cast(name = "Sandi Tile", character = "Amin")
+    )
 
+    private val listCastRobinHood = arrayListOf(
+        Cast(name = "Taron Egerton", character = "Robin of Loxley"),
+        Cast(name = "Jamie Foxx", character = "Yahya / John"),
+        Cast(name = "Ben Mendelsohn", character = "Sheriff of Nottingham"),
+        Cast(name = "Eve Hewson", character = "Marian"),
+        Cast(name = "Jamie Dornan", character = "Will Scarlet")
+    )
+
+    private val listCastSpiderman = arrayListOf(
+        Cast(name = "Shameik Moore", character = "Miles Morales / Spider-Man (voice)"),
+        Cast(name = "Jake Johnson", character = "Peter B. Parker / Spider-Man (voice)"),
+        Cast(name = "Hailee Steinfeld", character = "Gwen Stacy / Spider-Woman (voice)"),
+        Cast(name = "Mahershala Ali", character = "Aaron Davis / Prowler (voice)"),
+        Cast(name = "Brian Tyree Henry", character = "Jefferson Davis (voice)")
+    )
+
+    private val listCastTheGirl = arrayListOf(
+        Cast(name = "Claire Foy", character = "Lisbeth Salander"),
+        Cast(name = "Sverrir Gudnason", character = "Mikael Blomkvist"),
+        Cast(name = "Lakeith Stanfield", character = "Edwin Needham"),
+        Cast(name = "Sylvia Hoeks", character = "Camilla Salander"),
+        Cast(name = "Stephen Merchant", character = "Frans Balder")
+    )
+
+    private val listCastTheMule = arrayListOf(
+        Cast(name = "Clint Eastwood", character = "Earl Stone"),
+        Cast(name = "Bradley Cooper", character = "Agent Colin Bates"),
+        Cast(name = "Laurence Fishburne", character = "Special Agent in Charge"),
+        Cast(name = "Michael Peña", character = "Agent Treviño"),
+        Cast(name = "Dianne Wiest", character = "Mary")
+    )
+
+    private val listCastVenom = arrayListOf(
+        Cast(name = "Tom Hardy", character = "Eddie Brock / Venom"),
+        Cast(name = "Michelle Williams", character = "Anne Weying"),
+        Cast(name = "Riz Ahmed", character = "Carlton Drake / Riot"),
+        Cast(name = "Scott Haze", character = "Security Chief Roland Treece"),
+        Cast(name = "Reid Scott", character = "Dr. Dan Lewis")
+    )
 
     private val listOfAllCast = arrayOf(
         listCastAStarIsBorn,
@@ -114,7 +174,15 @@ object CastData {
         listCastDragon,
         listCastDragonBall,
         listCastGlass,
-        listCastHunterKiller
+        listCastHunterKiller,
+        listCastMaryPoppins,
+        listCastMortalEngines,
+        listCastPremanPensiun,
+        listCastRobinHood,
+        listCastSpiderman,
+        listCastTheGirl,
+        listCastTheMule,
+        listCastVenom
     )
 
     fun getListOfCast(position: Int) : ArrayList<Cast>{

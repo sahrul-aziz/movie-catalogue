@@ -4,7 +4,7 @@ import com.dicoding.submission.moviecatalogue.R
 
 object MovieData {
 
-    private val totalData: Int = 12
+    private const val totalData: Int = 20
 
     private val moviesTitle = arrayOf(
         "A Star is Born",
@@ -76,7 +76,7 @@ object MovieData {
     )
 
     private val moviesScore = intArrayOf(
-        75, 68, 83, 70, 80, 65, 67, 69, 77, 74, 66, 64
+        75, 68, 83, 70, 80, 65, 67, 69, 77, 74, 66, 64, 66, 60, 65, 58, 84, 60, 66, 66
     )
 
     private val moviesOverview = arrayOf(
@@ -114,7 +114,15 @@ object MovieData {
         "1h 44m",
         "1h 41m",
         "2h 9m",
-        "2h 2m"
+        "2h 2m",
+        "2h 11m",
+        "2h 9m",
+        "1h 34m",
+        "1h 56m",
+        "1h 57m",
+        "1h 57m",
+        "1h 57m",
+        "1h 52m"
     )
 
     private val moviesListOfGenre = arrayOf(
@@ -129,7 +137,15 @@ object MovieData {
         listOf("Animation", "Family", "Adventure"),
         listOf("Action", "Animation", "Fantasy", "Adventure", "Comedy", "Science Fiction"),
         listOf("Thriller", "Drama", "Science Fiction"),
-        listOf("Action", "Thriller")
+        listOf("Action", "Thriller"),
+        listOf("Fantasy", "Family", "Comedy"),
+        listOf("Adventure", "Fantasy"),
+        listOf("Comedy", "Drama"),
+        listOf("Adventure", "Action", "Thriller"),
+        listOf("Action", "Adventure", "Animation", "Science Fiction", "Comedy"),
+        listOf("Action", "Crime", "Thriller"),
+        listOf("Crime", "Drama", "Thriller"),
+        listOf("Science Fiction", "Action")
     )
 
     val listOfMovie: ArrayList<Movie>

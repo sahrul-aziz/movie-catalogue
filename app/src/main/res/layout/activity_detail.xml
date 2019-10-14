@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.DetailActivity">
 
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

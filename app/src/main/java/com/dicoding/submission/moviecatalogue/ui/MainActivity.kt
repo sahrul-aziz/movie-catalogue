@@ -1,5 +1,6 @@
 package com.dicoding.submission.moviecatalogue.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
@@ -26,7 +27,11 @@ class MainActivity : AppCompatActivity() {
         addItem()
 
         list_view_movie.onItemClickListener = AdapterView.OnItemClickListener{ _, _, position, _ ->
-            Toast.makeText(this@MainActivity, listOfMovies[position].title, Toast.LENGTH_LONG).show()
+//            Toast.makeText(this@MainActivity, listOfMovies[position].title, Toast.LENGTH_LONG).show()
+
+            val intent = Intent(this@MainActivity, DetailActivity::class.java)
+            intent.putExtra("movie", listOfMovies[position])
+            startActivity(intent)
         }
     }
 
