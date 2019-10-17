@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
         addItem()
 
         list_view_movie.onItemClickListener = AdapterView.OnItemClickListener{ _, _, position, _ ->
-//            Toast.makeText(this@MainActivity, listOfMovies[position].title, Toast.LENGTH_LONG).show()
-
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
             intent.putExtra("movie", listOfMovies[position])
             startActivity(intent)
