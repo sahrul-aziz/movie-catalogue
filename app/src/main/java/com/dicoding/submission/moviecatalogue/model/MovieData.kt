@@ -125,7 +125,7 @@ object MovieData {
         "1h 52m"
     )
 
-    private val moviesListOfGenre = arrayOf(
+    private val moviesListOfGenre = arrayListOf(
         listOf("Drama", "Romance", "Music"),
         listOf("Action", "Adventure", "Fantasy"),
         listOf("Adventure", "Action", "Science Fiction"),

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import com.bumptech.glide.Glide
 import com.dicoding.submission.moviecatalogue.R
+import com.dicoding.submission.moviecatalogue.helper.GenreColorDecider
 import com.dicoding.submission.moviecatalogue.model.Movie
 import kotlinx.android.synthetic.main.item_movie.view.*
 
@@ -44,51 +45,37 @@ class MovieAdapter internal constructor(private val context: Context) : BaseAdap
                 tv_score.text = score
 
                 var moreGenre = 0
-                for ((index, genre) in movie.listOfGenre.withIndex()) {
+                var index = 0
+                for (genre in movie.listOfGenre) {
                     when (index) {
                         0 -> {
                             tv_genre_1.text = genre
-                            tv_genre_1.setBackgroundResource(getGenreTextViewStyle(genre))
+                            tv_genre_1.setBackgroundResource(GenreColorDecider.decide(genre))
                         }
                         1 -> {
                             tv_genre_2.text = genre
-                            tv_genre_2.setBackgroundResource(getGenreTextViewStyle(genre))
+                            tv_genre_2.setBackgroundResource(GenreColorDecider.decide(genre))
                         }
                         2 -> {
                             tv_genre_3.text = genre
-                            tv_genre_3.setBackgroundResource(getGenreTextViewStyle(genre))
+                            tv_genre_3.setBackgroundResource(GenreColorDecider.decide(genre))
                         }
                         movie.listOfGenre.lastIndex -> {
                             moreGenre++
                             val moreGenreString = "+$moreGenre more"
                             tv_genre_more.text = moreGenreString
-                            tv_genre_more.setBackgroundResource(getGenreTextViewStyle(moreGenreString))
+                            tv_genre_more.setBackgroundResource(GenreColorDecider.decide(moreGenreString))
                         }
                         else -> moreGenre++
                     }
+                    index++
                 }
 
                 tv_overview.text = movie.overview
             }
         }
 
-        private fun getGenreTextViewStyle(genre: String) : Int {
-            return when(genre) {
-                "Action" -> R.drawable.genre_action
-                "Adventure" -> R.drawable.genre_adventure
-                "Animation" -> R.drawable.genre_animation
-                "Comedy" -> R.drawable.genre_comedy
-                "Crime" -> R.drawable.genre_crime
-                "Drama" -> R.drawable.genre_drama
-                "Family" -> R.drawable.genre_family
-                "Fantasy" -> R.drawable.genre_fantasy
-                "Music" -> R.drawable.genre_music
-                "Romance" -> R.drawable.genre_romance
-                "Science Fiction" -> R.drawable.genre_science_fiction
-                "Thriller" -> R.drawable.genre_thriller
-                else -> R.drawable.genre_default
-            }
-        }
+
     }
 
 }

@@ -10,4 +10,6 @@
     <string name="runtime_label">Runtime</string>
     <string name="runtime_placeholder">1h 52m</string>
     <string name="top_billed_cast">Top billed cast</string>
+    <string name="overview">Overview</string>
+    <string name="genre">Genre</string>
 </resources>

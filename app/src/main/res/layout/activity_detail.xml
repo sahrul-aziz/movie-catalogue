@@ -2,38 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".ui.DetailActivity">
 
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-        <ImageView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView
                 android:id="@+id/image_movie_detail"
                 android:layout_width="150dp"
                 android:layout_height="225dp"
                 android:scaleType="fitXY"
                 android:contentDescription="@string/poster"
                 tools:src="@android:color/darker_gray"/>
-        <TextView
+            <TextView
                 android:id="@+id/tv_release_year_label"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
                 android:layout_marginStart="8dp"
                 android:text="@string/release_year_label"
                 android:textStyle="bold"
-        />
+                />
 
-        <TextView
+            <TextView
                 android:id="@+id/tv_release_year"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
                 android:layout_below="@id/tv_release_year_label"
                 android:layout_marginStart="8dp"
                 tools:text="@string/year"
-        />
+                />
 
-        <TextView
+            <TextView
                 android:id="@+id/tv_score_detail_label"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
@@ -42,18 +47,18 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/score_label"
                 android:textStyle="bold"
-        />
+                />
 
-        <TextView
+            <TextView
                 android:id="@+id/tv_score_detail"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
                 android:layout_below="@id/tv_score_detail_label"
                 android:layout_marginStart="8dp"
                 tools:text="@string/score"
-        />
+                />
 
-        <TextView
+            <TextView
                 android:id="@+id/tv_runtime_detail_label"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
@@ -62,40 +67,61 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/runtime_label"
                 android:textStyle="bold"
-        />
+                />
 
-        <TextView
+            <TextView
                 android:id="@+id/tv_runtime_detail"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/image_movie_detail"
                 android:layout_below="@id/tv_runtime_detail_label"
                 android:layout_marginStart="8dp"
                 tools:text="@string/runtime_placeholder"
-        />
+                />
+
+        </RelativeLayout>
 
         <TextView
-                android:id="@+id/tv_actor_detail_label"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/image_movie_detail"
-                android:layout_below="@id/tv_runtime_detail"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/top_billed_cast"
-                android:textStyle="bold"
-        />
+            android:id="@+id/tv_overview_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/overview"
+            android:textStyle="bold"/>
 
-        <ListView android:id="@+id/list_view_actor"
-                  android:layout_width="wrap_content" android:layout_height="wrap_content"
-                  android:layout_toEndOf="@id/image_movie_detail"
-                  android:layout_below="@id/tv_actor_detail_label"
-                  android:layout_marginStart="8dp"
-        />
-    </RelativeLayout>
+        <TextView android:id="@+id/tv_overview_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/overview"/>
 
-    <TextView android:id="@+id/tv_overview_detail"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-
+        <TextView
+            android:id="@+id/tv_genre_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/genre"
+            android:textStyle="bold"/>
 
 
+        <LinearLayout
+            android:id="@+id/genre_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_actor_detail_label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/top_billed_cast"
+            android:textStyle="bold"
+            />
+
+        <ListView
+            android:id="@+id/list_view_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </LinearLayout>
