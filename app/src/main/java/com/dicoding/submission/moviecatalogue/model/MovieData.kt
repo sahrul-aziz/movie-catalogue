@@ -125,29 +125,6 @@ object MovieData {
         "1h 52m"
     )
 
-    private val moviesListOfGenre = arrayListOf(
-        listOf("Drama", "Romance", "Music"),
-        listOf("Action", "Adventure", "Fantasy"),
-        listOf("Adventure", "Action", "Science Fiction"),
-        listOf("Thriller", "Drama"),
-        listOf("Drama", "Music"),
-        listOf("Action", "Adventure", "Science Fiction"),
-        listOf("Drama"),
-        listOf("Comedy", "Action"),
-        listOf("Animation", "Family", "Adventure"),
-        listOf("Action", "Animation", "Fantasy", "Adventure", "Comedy", "Science Fiction"),
-        listOf("Thriller", "Drama", "Science Fiction"),
-        listOf("Action", "Thriller"),
-        listOf("Fantasy", "Family", "Comedy"),
-        listOf("Adventure", "Fantasy"),
-        listOf("Comedy", "Drama"),
-        listOf("Adventure", "Action", "Thriller"),
-        listOf("Action", "Adventure", "Animation", "Science Fiction", "Comedy"),
-        listOf("Action", "Crime", "Thriller"),
-        listOf("Crime", "Drama", "Thriller"),
-        listOf("Science Fiction", "Action")
-    )
-
     val listOfMovie: ArrayList<Movie>
         get() {
             val list = arrayListOf<Movie>()
@@ -159,7 +136,6 @@ object MovieData {
                 movie.score = moviesScore[position]
                 movie.overview = moviesOverview[position]
                 movie.runtime = moviesRuntime[position]
-                movie.listOfGenre = moviesListOfGenre[position]
                 movie.listOfCast = CastData.getListOfCast(position)
                 list.add(movie)
             }

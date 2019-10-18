@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
-import android.widget.ListView
-import android.widget.Toast
 import com.dicoding.submission.moviecatalogue.R
 import com.dicoding.submission.moviecatalogue.adapter.MovieAdapter
 import com.dicoding.submission.moviecatalogue.model.Movie

@@ -94,23 +94,6 @@
             tools:text="@string/overview"/>
 
         <TextView
-            android:id="@+id/tv_genre_detail_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/genre"
-            android:textStyle="bold"/>
-
-
-        <LinearLayout
-            android:id="@+id/genre_detail_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <TextView
             android:id="@+id/tv_actor_detail_label"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
